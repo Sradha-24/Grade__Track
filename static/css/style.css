@@ -1,0 +1,404 @@
+/* Deep Slate & Indigo Palette */
+:root {
+    --bg-deep: #0f172a;       /* Dark charcoal-blue */
+    --bg-card: #1e293b;       /* Slate blue */
+    --indigo-primary: #3b82f6; /* Saturated, strong blue */
+    --indigo-hover: #2563eb;
+    --text-bright: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-slate: #334155;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg-deep);
+    color: var(--text-bright);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Navbar: Dark and Integrated */
+.navbar {
+    height: 70px;
+    background-color: rgba(15, 23, 42, 0.95);
+    border-bottom: 1px solid var(--border-slate);
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--indigo-primary);
+}
+
+.auth-actions {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.link-secondary {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.link-secondary:hover {
+    color: var(--text-bright);
+}
+
+.btn-primary {
+    background-color: var(--indigo-primary);
+    color: white;
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn-primary:hover {
+    background-color: var(--indigo-hover);
+    transform: translateY(-1px);
+}
+
+/* Hero Section */
+.hero-container {
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-box {
+    text-align: center;
+    padding: 20px;
+}
+
+.title {
+    font-size: 5rem;
+    font-weight: 900;
+    margin: 0;
+    color: var(--text-bright);
+    letter-spacing: -2px;
+}
+
+.description {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 20px auto 40px;
+    line-height: 1.6;
+}
+
+.accent-bar {
+    width: 80px;
+    height: 6px;
+    background: var(--indigo-primary);
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Add these to your existing CSS file */
+
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-card {
+    background-color: var(--bg-card);
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--border-slate);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.card-header h2 {
+    font-size: 1.8rem;
+    color: var(--text-bright);
+    margin: 10px 0;
+}
+
+.card-header p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.back-link {
+    color: var(--indigo-primary);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Form Styling */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.input-group input {
+    background-color: var(--bg-deep);
+    border: 1px solid var(--border-slate);
+    border-radius: 6px;
+    padding: 12px;
+    color: white;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--indigo-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.btn-primary-full {
+    background-color: var(--indigo-primary);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.btn-primary-full:hover {
+    background-color: var(--indigo-hover);
+}
+
+.card-footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.card-footer a {
+    color: var(--indigo-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.card-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for the Role Dropdown */
+.auth-select {
+    background-color: var(--bg-deep);
+    border: 1px solid var(--border-slate);
+    border-radius: 6px;
+    padding: 12px;
+    color: var(--text-muted); /* Slightly muted for the placeholder */
+    font-size: 1rem;
+    cursor: pointer;
+    appearance: none; /* Removes default browser arrow */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    transition: all 0.2s;
+}
+
+.auth-select:focus {
+    outline: none;
+    border-color: var(--indigo-primary);
+    color: var(--text-bright);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Ensure consistent card heights and alignment */
+.auth-page {
+    background: radial-gradient(at top left, #1e293b, #0f172a);
+}
+
+.login-card {
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Dashboard Layout Specifics */
+.dashboard-body {
+    display: flex;
+    background-color: var(--bg-deep);
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 260px;
+    background-color: var(--bg-card);
+    border-right: 1px solid var(--border-slate);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+}
+
+.sidebar-header {
+    padding: 30px 20px;
+}
+
+.sidebar-nav {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-bright);
+}
+
+.nav-link.active {
+    background-color: var(--indigo-primary);
+    color: white;
+}
+
+.sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid var(--border-slate);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.user-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.user-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 2px 0 15px 0;
+}
+
+.logout-btn {
+    display: block;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #ef4444; /* Red for logout */
+    color: #ef4444;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.logout-btn:hover {
+    background-color: #ef4444;
+    color: white;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 260px; /* Same as sidebar width */
+    flex-grow: 1;
+    padding: 40px;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.content-header h1 {
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: -1px;
+}
+
+.content-header p {
+    color: var(--text-muted);
+    margin: 5px 0 0 0;
+}
+
+.date-display {
+    font-size: 0.85rem;
+    color: var(--indigo-primary);
+    font-weight: 600;
+}
+
+/* Placeholder Card */
+.placeholder-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-slate);
+    padding: 30px;
+    border-radius: 12px;
+    border-style: dashed; /* Makes it look like an empty state */
+    text-align: center;
+    color: var(--text-muted);
+}
