@@ -1,0 +1,91 @@
+{% extends "teacher_dashboard.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Upload Data</title>
+
+</head>
+
+<body>
+
+    <h2>Upload student data</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+
+        Class id:
+
+        <input type="text" name="class_id" required><br><br>
+
+        <div class="form-group">
+
+    <label for="semester">Select Semester:</label>
+
+    <select name="semester" id="semester" class="form-control" required>
+
+        <option value="" disabled selected>Choose a semester</option>
+
+        <option value="Semester 1">Semester 1</option>
+
+        <option value="Semester 2">Semester 2</option>
+
+        <option value="Semester 3">Semester 3</option>
+
+        <option value="Semester 4">Semester 4</option>
+
+    </select>
+
+</div>
+
+<br>
+
+<div class="form-group">
+
+    <label for="model">Select Model:</label>
+
+    <select name="model" id="model" class="form-control" required>
+
+        <option value="" disabled selected>Choose a model</option>
+
+        <option value="model1">Model 1</option>
+
+        <option value="model2">Model 2</option>
+
+    </select>
+
+</div>
+
+<br>
+
+        Upload CSV:
+
+        <input type="file" name="file" required>
+
+        <br><br>
+
+        <button>Upload</button>
+
+    </form>
+
+
+
+    {% if message %}
+
+        <p>{{ message }}</p>
+
+    {% endif %}
+
+
+
+     
+
+</body>
+
+</html>
+
+{% endblock %} 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GradeTrack | Student Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="dashboard-body">
+
+<aside class="sidebar">
+    <div class="sidebar-header">
+        <div class="logo">Grade<span>Track</span></div>
+    </div>
+
+    <nav class="sidebar-nav">
+        <a href="/student/performance" class="nav-link active">
+             Performance
+        </a>
+        <a href="/view_profile" class="nav-link">
+             View Profile
+        </a>
+    </nav>
+
+    <div class="sidebar-footer">
+        <p>Logged in as</p>
+        <p>{{ user['name'] }}</p>
+        <a href="/logout">Logout</a>
+    </div>
+</aside>
+
+<main class="main-content">
+    <header class="content-header">
+        <h1>My Performance</h1>
+        <p>Welcome back, <strong>{{ user['name'] }}</strong></p>
+    </header>
+
+    <section class="dashboard-grid">
+        {% block content %}
+        {% endblock %}
+    </section>
+</main>
+
+</body>
+</html>

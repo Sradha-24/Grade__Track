@@ -1,0 +1,39 @@
+{% extends "student_dashboard.html" %}
+
+{% block content %}
+
+<h2>Semester-wise Performance</h2>
+
+{% if improvement %}
+<p><b>{{ improvement }}</b></p>
+{% endif %}
+
+<table border="1">
+<tr>
+    <th>Semester</th>
+    <th>Model</th>
+    <th>Sub1</th>
+    <th>Sub2</th>
+    <th>Sub3</th>
+    <th>Sub4</th>
+    <th>Overall</th>
+</tr>
+
+{% for row in student_data %}
+<tr>
+    <td>{{ row.semester }}</td>
+    <td>{{ row.model }}</td>
+    <td>{{ row.sub1_level }}</td>
+    <td>{{ row.sub2_level }}</td>
+    <td>{{ row.sub3_level }}</td>
+    <td>{{ row.sub4_level }}</td>
+    <td>{{ row.overall_result }}</td>
+</tr>
+{% endfor %}
+</table>
+
+{% if not student_data %}
+<p>No performance data found.</p>
+{% endif %}
+
+{% endblock %}

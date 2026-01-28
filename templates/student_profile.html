@@ -1,0 +1,24 @@
+{% extends "student_dashboard.html" %}
+
+{% block content %}
+<h2>My Profile</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Name</th>
+        <td>{{ user.name }}</td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td>{{ user.email }}</td>
+    </tr>
+    <tr>
+        <th>Role</th>
+        <td>{{ user.role }}</td>
+    </tr>
+    <tr>
+        <th>Register Number</th>
+        <td>{{ user.register_no }}</td>
+    </tr>
+</table>
+{% endblock %}

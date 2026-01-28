@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GradeTrack | Create Account</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="auth-page">
+
+    <div class="login-card">
+        <div class="card-header">
+            <a href="/" class="back-link">← Home</a>
+            <h2>Create Account</h2>
+            <p>Join GradeTrack to start managing your performance.</p>
+        </div>
+
+        <form method="POST" action="/register" class="auth-form">
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" name="name" placeholder="John Doe" required>
+            </div>
+
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" name="email" placeholder="name@university.edu" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Create a strong password" required>
+            </div>
+
+
+            <div class="input-group">
+                <label>Role:</label>
+                <select name="role" id="role" onchange="toggleRegisterNo()" required>
+                 <option value="">Select Role</option>
+                 <option value="student">Student</option>
+                 <option value="teacher">Teacher</option>
+               </select>
+            </div>
+
+            <div id="reg_no_div" style="display:none;">
+              <label>Register Number:</label>
+              <input type="text" name="register_no">
+            </div>
+
+            <script>
+            function toggleRegisterNo() {
+                const role = document.getElementById("role").value;
+                const regDiv = document.getElementById("reg_no_div");
+
+                if (role === "student") {
+                     regDiv.style.display = "block";
+                } else {
+                     regDiv.style.display = "none";
+                }
+            }
+            </script>
+
+
+            <button type="submit" class="btn-primary-full">Create Account</button>
+        </form>
+
+        <div class="card-footer">
+            <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

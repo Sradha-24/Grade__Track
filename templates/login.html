@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GradeTrack | Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="auth-page">
+
+    <div class="login-card">
+        <div class="card-header">
+            <a href="/" class="back-link">← Back</a>
+            <h2>Welcome Back</h2>
+            <p>Enter your credentials to access GradeTrack</p>
+        </div>
+
+        <form method="POST" action="/login" class="auth-form">
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" name="email" placeholder="name@university.edu" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="••••••••" required>
+            </div>
+
+            <button type="submit" class="btn-primary-full">Login to Dashboard</button>
+        </form>
+
+        <div class="card-footer">
+            <p>Don't have an account? <a href="/register">Register here</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

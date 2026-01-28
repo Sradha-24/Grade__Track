@@ -1,0 +1,75 @@
+{% extends "teacher_dashboard.html" %}
+
+{% block content %}
+
+<h2>Class Performance</h2>
+
+<form method="POST">
+    Class ID:
+    <input type="text" name="class_id" required><br><br>
+
+    <label for="semester">Select Semester:</label>
+
+    <select name="semester" id="semester" class="form-control" required>
+
+        <option value="" disabled selected>Choose a semester</option>
+
+        <option value="Semester 1">Semester 1</option>
+
+        <option value="Semester 2">Semester 2</option>
+
+        <option value="Semester 3">Semester 3</option>
+
+        <option value="Semester 4">Semester 4</option>
+
+    </select><br><br>
+
+    <div class="form-group">
+
+    <label for="model">Select Model:</label>
+
+    <select name="model" id="model" class="form-control" required>
+
+        <option value="" disabled selected>Choose a model</option>
+
+        <option value="model1">Model 1</option>
+
+        <option value="model2">Model 2</option>
+
+    </select>
+
+</div><br><br>
+
+    <button>View Performance</button>
+</form>
+
+{% if message %}
+    <p>{{ message }}</p>
+{% endif %}
+
+{% if performance_data %}
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <th>Register No</th>
+            <th>Student Name</th>
+            <th>Sub1 Level</th>
+            <th>Sub2 Level</th>
+            <th>Sub3 Level</th>
+            <th>Sub4 Level</th>
+            <th>Overall Result</th>
+        </tr>
+        {% for row in performance_data %}
+        <tr>
+            <td>{{ row['register_no'] }}</td>
+            <td>{{ row['student_name'] }}</td>
+            <td>{{ row['sub1_level'] }}</td>
+            <td>{{ row['sub2_level'] }}</td>
+            <td>{{ row['sub3_level'] }}</td>
+            <td>{{ row['sub4_level'] }}</td>
+            <td>{{ row['overall_result'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endif %}
+
+{% endblock %}
